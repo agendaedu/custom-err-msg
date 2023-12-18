@@ -8,11 +8,11 @@ module ActiveModel
       if message.start_with?('^')
         I18n.t :"errors.^format", default: message[1..-1]
       else
-        I18n.t(:"errors.format", {
+        I18n.t(:"errors.format",
           default:  "%{attribute} %{message}",
           attribute: attr_name,
           message:   message
-        })
+        )
       end
     end
   end

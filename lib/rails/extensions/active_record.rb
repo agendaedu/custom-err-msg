@@ -16,10 +16,10 @@ protected
       else
         keys.push('%{attribute} %{message}')
 
-        options.merge!(:default => keys, :message => self.message)        
+        options.merge!(:default => keys, :message => self.message)
       end
-      
-      I18n.translate(keys.shift, options)
+
+      I18n.translate(keys.shift, **options)
     end
   end
 end
